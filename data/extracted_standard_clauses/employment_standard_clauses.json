@@ -1,0 +1,104 @@
+[
+  {
+    "clause_id": "C1",
+  "clause_title": "Standard German Employment Contract: Commencement of Employment",
+    "clause_text": "§ 1 Commencement of Employment\n1. The employment commences with effect from [ ]. Before the beginning of the agreement,\nan ordinary termination is excluded.\n2. Regardless of the date of commencement of the employment, the first 6 months are considered a probationary period.\nDuring the probationary period, each of the two parties may, terminate with a notice period of\ntwo weeks. This rule applies until the last day of the probationary period.",
+    "clause_type": "employment_terms"
+  },
+  {
+    "clause_id": "C2",
+  "clause_title": "Standard German Employment Contract: Employment Duties",
+    "clause_text": "§ 2\nEmployment Duties\n1. The Employee has been employed as […]\n2. The Company reserves the right to delegate to the employee any other or additional activity\ncommensurate with his or her previous education and work experience acquired within the\nCompany or an affiliate.",
+    "clause_type": "job_description"
+  },
+  {
+    "clause_id": "C3",
+  "clause_title": "Standard German Employment Contract: Workplace",
+    "clause_text": "§ 3\nThe work place is: [Adresse]\nThe Company may, at its discretion, arrange the Employee to perform his or her work\ntemporarily or permanently at any other place of work.",
+    "clause_type": "workplace"
+  },
+  {
+    "clause_id": "C4",
+  "clause_title": "Standard German Employment Contract: Working Hours",
+    "clause_text": "§ 4 Working Hours\nThe regular working hours are 40 hours a week. The beginning and end of the daily working\nhours as well as any breaks during working hours are determined by the according operational\nrequirements of the Company. In particular, they are to be aligned to the usual business and\noffice hours of the Company’s customers.",
+    "clause_type": "working_hours"
+  },
+  {
+    "clause_id": "C5",
+  "clause_title": "Standard German Employment Contract: Salary",
+    "clause_text": "§ 5\nSalary\n1. The salary will be transferred to his/her account by the end of the calendar month.\n2. 2. Overtime hours will only be paid, if those have been expressly requested by the Executive\nBoard.\nThe Employee only has entitlement to receive a financial compensation for his/her overtime\nhours. He/she has no right to request time off in lieu.\n3. The financial compensation consists of a cashless payment transaction. The Employee shall\ncommunicate his/her bank details to the company within 10 days after commencement of\nemployment.",
+    "clause_type": "payment"
+  },
+  {
+    "clause_id": "C6",
+  "clause_title": "Standard German Employment Contract: Additional Occupations and Benefits",
+    "clause_text": "§ 6 Additional Occupations\n1. The Company grants the Employee up to 50% of the respective health insurance contribution\nof BKK … as far as the Employee provides proof of private health insurance.\n2. For travel that becomes necessary in the interest of the Company, the Employee receives\nreimbursement of the travel costs and expenses according to the respective guidelines of the\nCompany. The Company may change and modify this latter at its reasonable discretion.\n3. In June of every year, the Company will pay the Employees a holiday allowance in the\namount of…. EURO\n4. During the first 5 years of employment with the Company, the Employer will pay the employee\na monthly allowance in November of each year together with the monthly salary for November\nin the amount of half a gross monthly salary calculated from the average gross monthly salary of\nthe preceding 12 calendar months in accordance with § 5 listed above. If the Employee\ncommences the employment with the Company after January 1 of that year, he/she will receive\na pro rata Christmas bonus for the time he has worked for the Company during that year (up to\nand including 31 December).\nAfter the first 5 years of employment, in November of each year, together with the monthly\nsalary for November, the Company pays the employee a Christmas bonus in the amount of a\nfull gross monthly salary calculated from the average gross monthly salary of the previous 12\ncalendar months, in accordance with § 5 of this agreement.\nThe Christmas bonus is paid only if the employee is not terminating his/her employment at the\ntime of payment of the November salary.",
+    "clause_type": "benefits"
+  },
+  {
+    "clause_id": "C7",
+  "clause_title": "Standard German Employment Contract: Inability to work",
+    "clause_text": "§ 7 Inability to work\n1. The Employee is obligated to inform the Company immediately of any abrupt leave of\nabsence and its probable duration. On request, the reasons of the absence from work are to be\ndeclared.\n2. In the case of sickness, the Employee is obliged to present a medical certificate of incapacity\nfor work and its probable absence duration before the end of the third calendar day after the\nbeginning of the leave for sickness. If the incapacity to work lasts longer than indicated in the\ncertificate, the employee must submit a new medical certificate within three days.\n3. The Employee is obligated to immediately provide the Company with a certificate of approval\nfor a cure or a medical procedure and to inform the company of the date of commencement of\nthe treatment. The certificate of authorization must contain information on the expected duration\nof the cure. If the treatment lasts longer than stated in the certificate, the Employee is obliged to\nprovide the company with a further corresponding certificate without delay.",
+    "clause_type": "sick_leave"
+  },
+  {
+    "clause_id": "C8",
+  "clause_title": "Standard German Employment Contract: Annual Leave",
+    "clause_text": "§ 8\nAnnual Leave\n1. The Employee is entitled to an annual leave of 25 days.\n2. The annual leave has to be taken in accordance with the operational requirements of the\nCompany. A written request of leave is to be submitted at least four weeks before the actual\nleave and has to be confirm (or declined) by the employer. In the first 6 prefatory months, the\nemployee is not entitled to request days-off.\n3. It is not possible to transfer possible remaining days of vacation beyond the 31st of March of\nlast year, unless the Employees have not been able to take the vacation leave for\nCompany-related reasons; in this case the leave is certified by the execution board.\n[4. In accordance with § 6 above, the Employee is paid an annual holiday allowance.]\n5. Statutory provisions apply.",
+    "clause_type": "vacation"
+  },
+  {
+    "clause_id": "C9",
+  "clause_title": "Standard German Employment Contract: Confidentiality",
+    "clause_text": "§ 9 Confidentiality\n1. The Employee shall not disclose any business and operational secrets and any confidential\ninformation to extern and unaffiliated Employees. This duty of confidentiality extends to the\naffairs of other companies with which the Company is economically or organizationally\nconnected, and continues also after the end of the employment relationship.\n2. All correspondence affecting the Company and its interests, regardless of the addressee, as\nwell as any other business, draft, notes, books, designs, models, tools, materials, etc., shall be\ntheir sole property and shall be returned unsolicited upon termination of the employment\nrelationship. Retention rights are excluded. The aforementioned documents shall not be made\naccessible to third parties.\n3. The Company protective provisions are to be observed; confidential and secret documents,\ndrawings, models etc. are to be kept under the requested closure.",
+    "clause_type": "confidentiality"
+  },
+  {
+    "clause_id": "C10",
+  "clause_title": "Standard German Employment Contract: Inventions",
+    "clause_text": "§ 10 Inventions\nIn case of inventions on the workplace, the German Law on Employee Inventions, as amended,\nas well as the related directives for the Remuneration of Employee inventions in the private\nsector applies.",
+    "clause_type": "intellectual_property"
+  },
+  {
+    "clause_id": "C11",
+  "clause_title": "Standard German Employment Contract: Secondary Employment",
+    "clause_text": "§ 11 Secondary Employment\nAny paid or unpaid secondary employment requires the special written permission of the\nCompany. This shall not be granted if it is considered that the duties of the Employee to the\nCompany will be materially impaired.",
+    "clause_type": "conflict_of_interest"
+  },
+  {
+    "clause_id": "C12",
+  "clause_title": "Standard German Employment Contract: Contractual Penalties",
+    "clause_text": "§ 12\nContractual Penalties\n1. In the event of culpable non-acceptance or non-conformance of the activity, the Employee\nundertakes to pay the Company a contractual penalty in the amount of a total monthly income.\nThe total monthly income is calculated by the salaries average of the last twelve months or, in\nthe case of a shorter period of employment, by the average earnings during the period of\nemployment or, if the activity has not started, the agreed remuneration. The Company is entitled\nto claim further damages.\n2. If the employee acts contrary to the obligations of § 11, the Company may, without prejudice\nto its other rights, demand for each case of the infringement a contractual penalty in the amount\nof a total monthly income. This does not affect the possibility of asserting further damage.",
+    "clause_type": "penalties"
+  },
+  {
+    "clause_id": "C13",
+  "clause_title": "Standard German Employment Contract: Termination",
+    "clause_text": "§ 13 1. The parties agree on an open-end employment contract.\n2. After expiration of the probationary period, the employment relationship may be terminated by\nboth parties only subject to a notice period of [four] weeks from [15. or XY of the month].\n3. The employment relationship ends at the latest at the end of the month in which the\nemployee reaches the statutory retirement age.\n4. An extraordinary termination shall be motivated by a particular cause and in this case a\nperiod of notice is not necessary.\nIf an extraordinary termination announced by the Company results legally ineffective, then it\nshall in any case be deemed to have been terminated in due time at the next possible\ntermination date.\n5. Terminations of any kind must be issued in written form.\n6. If the notice period is extended due to mandatory statutory provisions, the employee must\nalso comply with the extended deadline.\n7. After a notice of termination – regardless of which side – the company is entitled to indemnify\nthe employee from his duties, taking into account any claims for extra vacation and overtime,\nwithout affecting the other duties of the employee.",
+    "clause_type": "termination"
+  },
+  {
+    "clause_id": "C14",
+  "clause_title": "Standard German Employment Contract: Assignment of Claims",
+    "clause_text": "§ 14 Assignment\n1. The Employee assigns his claims for damages to the Company to the extent that he is injured\nby a third party and the company pays compensation in the event of illness.\n2. The Employee is obliged to provide the Company with the information required to file the\nclaims.",
+    "clause_type": "assignment"
+  },
+  {
+    "clause_id": "C15",
+  "clause_title": "Standard German Employment Contract: Place of Jurisdiction",
+    "clause_text": "§ 15\nPlace of Jurisdiction\nThe place of jurisdiction for both contractual partners is the place of registration of the Head\nOffice of the Company.",
+    "clause_type": "governing_law"
+  },
+  {
+    "clause_id": "C16",
+  "clause_title": "Standard German Employment Contract: Modification of the Agreement",
+    "clause_text": "§ 16 Modification of the Agreement\n1. The rights and obligations of the parties are governed solely by this contract. Additional\nagreements are not made. Changes and additions to the contract require the written form to be\nlegally valid.\n2. If individual provisions of this contract are ineffective, this shall not affect the validity of the\nremainder of the contract.\n3. If, in the future, a collective agreement should apply to the employment relationship (for\nexample, due to a general declaration of obligation), the benefits under the terms of this contract\nmay also be offset by dissimilar benefits under the collective agreement. This applies in\nparticular in the case of an annual special remuneration collective agreement.",
+    "clause_type": "amendment"
+  },
+  {
+    "clause_id": "C17",
+    "clause_title": "Other Obligations and Office Rules",
+    "clause_text": "§ 17 Other Obligations\n1. The Company’s Office Rules (which are incorporated in this copy of this Agreement) form an\nintegral part of this employment contract and the Employee undertakes to comply with all terms\nand conditions contained in the current version of this Rules. The Employee acknowledges the\nright of the company to take appropriate disciplinary measures in case of a violation of any kind\nagainst the house rules.\n2. The Employee shall notify the Company immediately of any changes to his or her address.",
+    "clause_type": "miscellaneous"
+  }
+]

@@ -1,5 +1,6 @@
 from google.adk.agents.llm_agent import LlmAgent
-from utils import MODEL_GEMINI_2_0_FLASH
+from utils.constants import MODEL_GEMINI_2_0_FLASH
+
 
 extractor_agent = LlmAgent(
     model=MODEL_GEMINI_2_0_FLASH,
@@ -13,13 +14,15 @@ extractor_agent = LlmAgent(
         "2️clause_title — if the clause has a heading, return it; otherwise infer a short descriptive title\n"
         "3️clause_text — the exact text of the clause\n"
         "4️clause_type — categorize it (e.g., 'termination', 'confidentiality', 'payment', 'liability', etc.)\n\n"
-        "Return the result as a JSON array like this:\n"
+        "5️contract_type - NDA, Employment Contract, Freelance Contract, Other\n\n"
+        "Return the result as a JSON array in the output_key:\n"
         "[\n"
         "  {\n"
         '    "clause_id": "C1",\n'
         '    "clause_title": "Confidentiality",\n'
         '    "clause_text": "The employee shall not disclose...",\n'
         '    "clause_type": "confidentiality"\n'
+        '    "contract_type": "NDA"\n'
         "  },\n"
         "  ...\n"
         "]\n\n"
@@ -27,4 +30,5 @@ extractor_agent = LlmAgent(
         "Do not summarize or rephrase — only extract exact text segments."
     ),
     description="Extracts and classifies clauses from legal contract text for downstream analysis.",
+    output_key="extractor_result"
 )
