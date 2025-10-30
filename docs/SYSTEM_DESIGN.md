@@ -40,8 +40,7 @@
                      │     ├── ClauseAnalysisWorkflow (Sequential)│
                      │     │     ├─ ClauseExtractorAgent (LLM)    │
                      │     │     ├─ ClauseComparisonAgent (Embed) │
-                     │     │     └─ RiskAnalysisAgent (LLM)       │
-                     │     └── QuestionAnswerAgent (LLM)          │
+                     │     │     └─ RiskAnalysisAgent (LLM)       │         │
                      └────────────────────────────────────────────┘
                                            │
                                            ▼

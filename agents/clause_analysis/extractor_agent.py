@@ -15,6 +15,7 @@ extractor_agent = LlmAgent(
         "3️clause_text — the exact text of the clause\n"
         "4️clause_type — categorize it (e.g., 'termination', 'confidentiality', 'payment', 'liability', etc.)\n\n"
         "5️contract_type - NDA, Employment Contract, Freelance Contract, Other\n\n"
+        "6️country - Jurisdiction of the contract if mentioned or inferable, otherwise 'Unknown'\n\n"
         "Return the result as a JSON array in the output_key:\n"
         "[\n"
         "  {\n"
@@ -23,10 +24,12 @@ extractor_agent = LlmAgent(
         '    "clause_text": "The employee shall not disclose...",\n'
         '    "clause_type": "confidentiality"\n'
         '    "contract_type": "NDA"\n'
+        '    "country": "Germany"\n'
         "  },\n"
         "  ...\n"
         "]\n\n"
         "If the input text seems incomplete, still extract any partial clauses you can identify. "
+        "If the document is not a legal document or contract text related to employment/NDA/freelance work in Germany, respond with an empty JSON array []. "
         "Do not summarize or rephrase — only extract exact text segments."
     ),
     description="Extracts and classifies clauses from legal contract text for downstream analysis.",

@@ -1,42 +1,63 @@
-from fastapi import FastAPI, Request, UploadFile, File, Form
+from fastapi import FastAPI, UploadFile, File, Form, Request
+from fastapi.responses import StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 from google.genai import types
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
-from agents.core_orchestrator import core_orchestrator_agent
-from utils.clean_agents_output import clean_agents_output
+from agents.root_agent import root_agent
 import PyPDF2
 
+APP_NAME = "Lexi"
 app = FastAPI()
 
-SESSION_ID = "session_001"
-USER_ID = "user_001"
-APP_NAME = "Lexi"
+# Add rate limiter
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
-async def create_session():
+# Enable CORS for the specified frontend origin
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://lexi-ai-legal-assistant-142471449149.us-west1.run.app"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
+async def create_session(session_id: str, user_id: str):
     session_service = InMemorySessionService()
 
     # Create the specific session where the conversation will happen
     await session_service.create_session(
         app_name=APP_NAME,
-        user_id=USER_ID,
-        session_id=SESSION_ID
+        user_id=user_id,
+        session_id=session_id
     )
-    print(f"Session created: App='{APP_NAME}', User='{USER_ID}', Session='{SESSION_ID}'")
+    print(f"Session created: App='{APP_NAME}', User='{user_id}', Session='{session_id}'")
     return session_service
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
-@app.post("/analyze-contract")
+
+@app.post("/contracts/analyze")
+@limiter.limit("4/minute")
 async def analyze_contract(
-    contract_text: str = Form(None),
-    user_question: str = Form(None),
-    file: UploadFile = File(None)
+    request: Request,
+    file: UploadFile = File(...),
+    session_id: str = Form(...),
+    user_id: str = Form(...)
 ):
-    session_service = await create_session()
+    session_service = await create_session(session_id, user_id)
 
     runner = Runner(
-        agent=core_orchestrator_agent,  # The agent we want to run
-        app_name=APP_NAME,    # Associates runs with our app
-        session_service=session_service  # Uses our session manager
+        agent=root_agent, 
+        app_name=APP_NAME,
+        session_service=session_service
     )
 
     extracted_text = None
@@ -46,12 +67,15 @@ async def analyze_contract(
             pdf_reader = PyPDF2.PdfReader(file.file)
             extracted_text = "\n".join(page.extract_text() or "" for page in pdf_reader.pages)
         except Exception as e:
-            return {"error": f"Failed to extract text from PDF: {str(e)}"}
+            def error_stream():
+                yield f"data: {{\"error\": \"Failed to extract text from PDF\"}}\n\n"
+            return StreamingResponse(error_stream(), media_type="text/event-stream")
 
-    # Prefer extracted PDF text, then contract_text from form
-    contract_input = extracted_text or contract_text
-    if not contract_input and not user_question:
-        return {"error": "Missing contract_text, PDF file, or user_question"}
+    contract_input = extracted_text
+    if not contract_input:
+        def error_stream():
+            yield "data: {\"error\": \"Missing contract_text or PDF file\"}\n\n"
+        return StreamingResponse(error_stream(), media_type="text/event-stream")
 
     if contract_input:
         content = types.Content(
@@ -68,14 +92,38 @@ async def analyze_contract(
 
     print("🧠 Running core orchestrator agent...")
 
-    async for event in runner.run_async(
-        user_id=USER_ID,
-        session_id=SESSION_ID,
-        new_message=content,
-    ):
-        if event.is_final_response() and event.content and event.content.parts:
-            final_response_text = event.content.parts[0].text
-            cleaned_output = clean_agents_output(final_response_text)
+    import json
+    async def event_stream():
+        try:
+            async for event in runner.run_async(
+                user_id=user_id,
+                session_id=session_id,
+                new_message=content,
+            ):
+                if event.content and event.content.parts:
+                    text = event.content.parts[0].text
+                    if text:
+                        # Remove markdown code block formatting if present
+                        if text.strip().startswith('```json'):
+                            text = text.strip()[7:]
+                        if text.strip().startswith('```'):
+                            text = text.strip()[3:]
+                        if text.strip().endswith('```'):
+                            text = text.strip()[:-3]
+                        try:
+                            parsed = json.loads(text)
+                            yield f'data: {json.dumps({"result": parsed})}\n\n'
+                        except Exception:
+                            # fallback to string if not valid JSON
+                            safe_cleaned = text.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", " ")
+                            yield f'data: {{"result": "{safe_cleaned}"}}\n\n'
+        except Exception as agent_error:
+            import traceback
+            error_message = f"Agent execution failed: {str(agent_error)}"
+            tb = traceback.format_exc()
+            print(error_message)
+            print(tb)
+            yield f'data: {{"error": "{error_message}"}}\n\n'
 
-    return {"result": cleaned_output}
+    return StreamingResponse(event_stream(), media_type="text/event-stream")
 

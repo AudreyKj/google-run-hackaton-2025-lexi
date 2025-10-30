@@ -22,6 +22,7 @@ risk_analysis_agent = LlmAgent(
         "    \"matching_standard_clauses\": [\n"
         "      \"The employee shall not disclose...\",\n"
         "    ],\n"
+        "    \"country\": \"Germany\",\n"
         "    \"matching_difference\": \"User clause is more permissive than standard clause.\",\n"
         "    \"similarity_score\": 0.75,\n"
         "    \"risk_level\": \"Medium\",\n"
@@ -33,6 +34,7 @@ risk_analysis_agent = LlmAgent(
         "Keep your explanations objective, use clear plain language, and avoid speculative or emotional phrasing. "
         "If you cannot determine risk for a clause, return 'Unknown' as the risk level with a short note explaining why."
         "Do not include any additional commentary outside the JSON structure."
+        "If {comparison_result} is empty, return an empty JSON array []."
     ),
     description="Analyzes extracted clauses and assigns risk levels with justifications and optional mitigation suggestions.",
 )

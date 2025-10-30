@@ -1,349 +1,376 @@
 [
   {
-  "clause_id": "C31",
-  "clause_title": "Standard German NDA: Governing Law",
-  "clause_text": "This Agreement shall be governed by and construed in accordance with the laws of the Federal\nRepublic of Germany.",
-    "clause_type": "governing_law"
-  },
-  {
-  "clause_id": "C32",
-  "clause_title": "Standard German NDA: Definition of Affiliate",
-  "clause_text": "\"Affiliate\" means, with respect to any Party, any entity that directly or indirectly controls, is\ncontrolled by, or is under common control with such Party, where \"control\" means the\npossession, directly or indirectly, of the power to direct or cause the direction of the\nmanagement and policies of such entity, whether through ownership of voting securities, by\ncontract or otherwise.",
-    "clause_type": "definition"
-  },
-  {
-  "clause_id": "C33",
-  "clause_title": "Standard German NDA: Definition of Confidential Information",
-  "clause_text": "\"Confidential Information\" means all information, data, materials, and documentation of any\nkind, whether written, oral, electronic, visual, or in any other form, that is disclosed by the\nDisclosing Party to the Receiving Party, including but not limited to technical data, trade secrets,\nknow-how, research, product plans, products, services, customers, customer lists, markets,\nsoftware, developments, inventions, processes, formulas, technology, designs, drawings,\nengineering, hardware configuration information, marketing, finances, or other business\ninformation.",
-    "clause_type": "definition"
-  },
-  {
-  "clause_id": "C34",
-  "clause_title": "Standard German NDA: Definition of Disclosing Party",
-  "clause_text": "\"Disclosing Party\" means the Party disclosing Confidential Information under this Agreement,\nas identified in the Parties section above.",
-    "clause_type": "definition"
-  },
-  {
-  "clause_id": "C35",
-  "clause_title": "Standard German NDA: Definition of Effective Date",
-  "clause_text": "\"Effective Date\" means [EFFECTIVE DATE] .",
-    "clause_type": "definition"
-  },
-  {
-  "clause_id": "C36",
-  "clause_title": "Standard German NDA: Definition of Purpose",
-  "clause_text": "\"Purpose\" means [PURPOSE OF DISCLOSURE] .",
-    "clause_type": "definition"
-  },
-  {
-  "clause_id": "C37",
-  "clause_title": "Standard German NDA: Definition of Receiving Party",
-  "clause_text": "\"Receiving Party\" means the Party receiving Confidential Information under this Agreement,\nas identified in the Parties section above.",
-    "clause_type": "definition"
-  },
-  {
-  "clause_id": "C38",
-  "clause_title": "Standard German NDA: Definition of Representatives",
-  "clause_text": "\"Representatives\" means, with respect to any Party, its directors, officers, employees, agents,\nadvisors, consultants, and professional advisers who have a legitimate need to know the\nConfidential Information for the Purpose and who are bound by confidentiality obligations no\nless restrictive than those contained in this Agreement.",
-    "clause_type": "definition"
-  },
-  {
-  "clause_id": "C39",
-  "clause_title": "Standard German NDA: Definition of Third Party",
-  "clause_text": "\"Third Party\" means any person or entity other than the Disclosing Party, the Receiving Party,\nand their respective Affiliates and Representatives.",
-    "clause_type": "definition"
-  },
-  {
-  "clause_id": "C40",
-  "clause_title": "Standard German NDA: Confidential Information",
-  "clause_text": "For the purposes of this Agreement, 'Confidential Information' means any and all non-public,\nproprietary, or confidential information disclosed by the Disclosing Party to the Receiving Party,\nwhether orally, in writing, electronically, or in any other form, including but not limited to:\ntechnical data, research, inventions, processes, algorithms, software, source code, object code,\nand know-how;\nbusiness information, including strategies, plans, financial information, pricing, customer lists,\nsupplier information, and market analyses;\nany information concerning the business, affairs, customers, clients, suppliers, plans, intentions,\nor market opportunities of the Disclosing Party;\nany analyses, compilations, studies, or other documents prepared by the Receiving Party that\ncontain or reflect Confidential Information.",
-    "clause_type": "confidentiality"
-  },
-  {
-  "clause_id": "C41",
-  "clause_title": "Standard German NDA: Confidential Information Identification",
-  "clause_text": "Confidential Information shall be deemed to include information that has been marked or\nidentified as 'confidential,' 'proprietary,' or with a similar designation, as well as information that\nwould reasonably be understood to be confidential given the nature of the information and the\ncircumstances of disclosure.",
-    "clause_type": "confidentiality"
-  },
-  {
-  "clause_id": "C42",
-  "clause_title": "Standard German NDA: Exclusions from Confidential Information",
-  "clause_text": "Confidential Information shall not include information that:\nis or becomes publicly available through no breach of this Agreement by the Receiving Party;\nwas rightfully known to the Receiving Party prior to disclosure by the Disclosing Party;\nis rightfully received by the Receiving Party from a Third Party without breach of any\nconfidentiality obligation;\nis independently developed by the Receiving Party without use of or reference to the\nConfidential Information; or\nis required to be disclosed by law or court order, provided that the Receiving Party gives the\nDisclosing Party prompt written notice of such requirement.",
-    "clause_type": "confidentiality"
-  },
-  {
-  "clause_id": "C43",
-  "clause_title": "Standard German NDA: Obligations of Receiving Party",
-    "clause_text": "The Receiving Party shall hold all Confidential Information in strict confidence and shall not\ndisclose any Confidential Information to any Third Party without the prior written consent of the\nDisclosing Party.",
-    "clause_type": "confidentiality"
-  },
-  {
-  "clause_id": "C44",
-  "clause_title": "Standard German NDA: Purpose of Use",
-    "clause_text": "The Receiving Party shall use the Confidential Information solely for the Purpose and shall not\nuse such information for any other purpose whatsoever.",
-    "clause_type": "usage"
-  },
-  {
-  "clause_id": "C45",
-  "clause_title": "Standard German NDA: Limited Access to Confidential Information",
-    "clause_text": "The Receiving Party shall limit access to Confidential Information to those of its Representatives\nwho have a legitimate need to know such information for the Purpose and who have been\ninformed of the confidential nature of such information.",
-    "clause_type": "access_control"
-  },
-  {
-  "clause_id": "C46",
-  "clause_title": "Standard German NDA: Confidentiality Obligations of Representatives",
-    "clause_text": "The Receiving Party shall ensure that all Representatives who have access to Confidential\nInformation are bound by confidentiality obligations no less restrictive than those contained in\nthis Agreement.",
-    "clause_type": "confidentiality"
-  },
-  {
-  "clause_id": "C47",
-  "clause_title": "Standard German NDA: Restrictions on Copying and Reproduction",
-    "clause_text": "The Receiving Party shall not copy, reproduce, or create derivative works from any Confidential\nInformation except to the extent reasonably necessary for the Purpose.",
-    "clause_type": "usage"
-  },
-  {
-  "clause_id": "C48",
-  "clause_title": "Standard German NDA: Reverse Engineering Prohibition",
-    "clause_text": "The Receiving Party shall not reverse engineer, disassemble, or decompile any Confidential\nInformation, including but not limited to any software, technical data, or proprietary processes\ndisclosed by the Disclosing Party.",
-    "clause_type": "restriction"
-  },
-  {
-  "clause_id": "C49",
-  "clause_title": "Standard German NDA: Notification of Unauthorized Disclosure",
-    "clause_text": "The Receiving Party shall immediately notify the Disclosing Party in writing upon becoming\naware of any unauthorized use or disclosure of Confidential Information and shall cooperate\nwith the Disclosing Party in any efforts to prevent or remedy such breach.",
-    "clause_type": "notification"
-  },
-  {
-  "clause_id": "C50",
-  "clause_title": "Standard German NDA: Permitted Disclosures - Prior Knowledge",
-    "clause_text": "The obligations set forth in Section 3 shall not apply to any Confidential Information that the\nReceiving Party can demonstrate by written records:\nwas known to the Receiving Party prior to disclosure by the Disclosing Party;\nis or becomes publicly available through no breach of this Agreement by the Receiving Party;\nis rightfully received by the Receiving Party from a Third Party without breach of any\nconfidentiality obligation;\nis independently developed by the Receiving Party without use of or reference to the\nConfidential Information.",
-    "clause_type": "exception"
-  },
-  {
-  "clause_id": "C51",
-  "clause_title": "Standard German NDA: Permitted Disclosures - Legal Requirement",
-    "clause_text": "The Receiving Party may disclose Confidential Information if and to the extent such disclosure\nis required by law , court order, or governmental regulation, provided that the Receiving Party:\ngives the Disclosing Party prompt written notice of such requirement;\ncooperates with the Disclosing Party in seeking a protective order or other appropriate remedy;\nand\ndiscloses only that portion of the Confidential Information that is legally required to be disclosed.",
-    "clause_type": "exception"
-  },
-  {
-  "clause_id": "C52",
-  "clause_title": "Standard German NDA: Permitted Disclosures - To Representatives",
-    "clause_text": "The Receiving Party may disclose Confidential Information to its Representatives who have a\nlegitimate need to know such information for the Purpose, provided that such Representatives\nare bound by confidentiality obligations no less restrictive than those contained herein.",
-    "clause_type": "exception"
-  },
-  {
-  "clause_id": "C53",
-  "clause_title": "Standard German NDA: Permitted Disclosures - With Consent",
-    "clause_text": "The Receiving Party may disclose Confidential Information with the prior written consent of the\nDisclosing Party, subject to any conditions specified in such consent.",
-    "clause_type": "exception"
-  },
-  {
-  "clause_id": "C54",
-  "clause_title": "Standard German NDA: StaStandard German NDA:rd of Care",
-    "clause_text": "The Receiving Party shall protect and safeguard the Confidential Information using the same\ndegree of care that it uses to protect its own confidential and proprietary information, but in no\nevent less than reasonable care.",
-    "clause_type": "due_diligence"
-  },
-  {
-  "clause_id": "C55",
-  "clause_title": "Standard German NDA: Prevention of Unauthorized Disclosure",
-    "clause_text": "The Receiving Party shall take all reasonable precautions to prevent any unauthorized\ndisclosure, publication, or dissemination of the Confidential Information.",
-    "clause_type": "due_diligence"
-  },
-  {
-  "clause_id": "C56",
-  "clause_title": "Standard German NDA: Representatives' Awareness of Confidentiality",
-    "clause_text": "The Receiving Party shall ensure that its Representatives who have access to the Confidential\nInformation are informed of the confidential nature of such information and are bound by\nconfidentiality obligations at least as restrictive as those contained in this Agreement.",
-    "clause_type": "due_diligence"
-  },
-  {
-  "clause_id": "C57",
-  "clause_title": "Standard German NDA: Liability for Representatives' Breach",
-    "clause_text": "The Receiving Party shall be liable for any breach of this Agreement by its Representatives as if\nsuch breach had been committed by the Receiving Party itself.",
-    "clause_type": "liability"
-  },
-  {
-  "clause_id": "C58",
-  "clause_title": "Standard German NDA: Notification of Unauthorized Use or Disclosure",
-    "clause_text": "The Receiving Party shall immediately notify the Disclosing Party in writing upon becoming\naware of any unauthorized use or disclosure of the Confidential Information.",
-    "clause_type": "notification"
-  },
-  {
-  "clause_id": "C59",
-  "clause_title": "Standard German NDA: Return or Destruction of Information",
-    "clause_text": "Upon written request by the Disclosing Party, or upon termination or expiration of this\nAgreement, the Receiving Party shall promptly return to the Disclosing Party all documents,\nmaterials, and other tangible items containing or representing Confidential Information.",
-    "clause_type": "return_of_information"
-  },
-  {
-  "clause_id": "C60",
-  "clause_title": "Standard German NDA: Destruction of Copies",
-    "clause_text": "In addition to the return obligation under clause 6.1, the Receiving Party shall destroy all copies,\nextracts, summaries, analyses, and other materials in any form that contain or are derived from\nConfidential Information, including electronic copies stored on computers, servers, or other\nstorage media.",
-    "clause_type": "return_of_information"
-  },
-  {
-  "clause_id": "C61",
-  "clause_title": "Standard German NDA: Secure Destruction",
-    "clause_text": "The destruction required under clause 6.2 shall be carried out in a secure manner that prevents\nrecovery or reconstruction of the Confidential Information.",
-    "clause_type": "return_of_information"
-  },
-  {
-  "clause_id": "C62",
-  "clause_title": "Standard German NDA: Certification of Return/Destruction",
-    "clause_text": "Within thirty (30) days of completion of the return and destruction obligations, the Receiving\nParty shall provide written certification to the Disclosing Party confirming that all Confidential\nInformation has been returned or destroyed in accordance with this clause 6.",
-    "clause_type": "return_of_information"
-  },
-  {
-  "clause_id": "C63",
-  "clause_title": "Standard German NDA: Exception for Legally Required Copies",
-    "clause_text": "Notwithstanding the foregoing, the Receiving Party may retain copies of Confidential Information\nto the extent required by applicable law or regulation, provided that such retained information\nremains subject to the confidentiality obligations of this Agreement.",
-    "clause_type": "return_of_information"
-  },
-  {
-  "clause_id": "C64",
-  "clause_title": "Standard German NDA: Application to Representatives",
-    "clause_text": "The obligations set forth in this clause 6 shall also apply to all Representatives of the Receiving\nParty who have had access to Confidential Information.",
-    "clause_type": "return_of_information"
-  },
-  {
-  "clause_id": "C65",
-  "clause_title": "Standard German NDA: No License or Rights Granted",
-    "clause_text": "Nothing in this Agreement shall be construed as granting, by implication, estoppel or otherwise,\nany license or right under any patent, copyright, trademark, trade secret or other intellectual\nproperty right of the Disclosing Party.",
-    "clause_type": "intellectual_property"
-  },
-  {
-  "clause_id": "C66",
-  "clause_title": "Standard German NDA: No Representation or Warranty",
-    "clause_text": "The disclosure of Confidential Information under this Agreement shall not constitute any\nrepresentation, warranty, assurance, guarantee or inducement by the Disclosing Party of any\nkind with respect to the Confidential Information, including without limitation regarding its\naccuracy, completeness, or freedom from defect.",
-    "clause_type": "warranty"
-  },
-  {
-  "clause_id": "C67",
-  "clause_title": "Standard German NDA: Limited Rights",
-    "clause_text": "No rights or licenses are granted to the Receiving Party other than the limited right to evaluate\nthe Confidential Information solely for the Purpose as defined herein.",
-    "clause_type": "rights"
-  },
-  {
-  "clause_id": "C68",
-  "clause_title": "Standard German NDA: Ownership of Intellectual Property",
-    "clause_text": "The Receiving Party acknowledges that any intellectual property rights in the Confidential\nInformation remain the exclusive property of the Disclosing Party or its licensors.",
-    "clause_type": "intellectual_property"
-  },
-  {
-  "clause_id": "C69",
-  "clause_title": "Standard German NDA: Term and Termination",
-    "clause_text": "This Agreement shall commence on the Effective Date and shall continue in force for a period of\nthree (3) years , unless terminated earlier in accordance with the provisions of this Agreement.",
-    "clause_type": "term_and_termination"
-  },
-  {
-  "clause_id": "C70",
-  "clause_title": "Standard German NDA: Termination on Notice",
-    "clause_text": "Either Party may terminate this Agreement at any time by giving thirty (30) days prior written\nnotice to the other Party.",
-    "clause_type": "term_and_termination"
-  },
-  {
-  "clause_id": "C71",
-  "clause_title": "Standard German NDA: Survival of Obligations",
-    "clause_text": "The obligations of the Receiving Party under this Agreement shall survive termination of this\nAgreement and shall continue for a period of five (5) years from the date of termination, or until\nsuch time as the Confidential Information becomes publicly available through no breach of this\nAgreement by the Receiving Party, whichever occurs first.",
-    "clause_type": "term_and_termination"
-  },
-  {
-  "clause_id": "C72",
-  "clause_title": "Standard German NDA: Survival of Specific Sections",
-    "clause_text": "Upon termination of this Agreement, the provisions of Sections 6 (Return or Destruction of\nInformation), 9 (Remedies and Injunctive Relief), 10 (Governing Law and Jurisdiction), and 11\n(Severability) shall survive and remain in full force and effect.",
-    "clause_type": "term_and_termination"
-  },
-  {
-  "clause_id": "C73",
-  "clause_title": "Standard German NDA: Liability Before Termination",
-    "clause_text": "Termination of this Agreement shall not relieve either Party of any liability for breach of this\nAgreement occurring prior to such termination.",
-    "clause_type": "term_and_termination"
-  },
-  {
-  "clause_id": "C74",
-  "clause_title": "Standard German NDA: Acknowledgement of Irreparable Harm",
-    "clause_text": "The Receiving Party acknowledges that any breach of this Agreement may cause irreparable\nharm to the Disclosing Party for which monetary damages would be inadequate compensation.",
-    "clause_type": "remedies"
-  },
-  {
-  "clause_id": "C75",
-  "clause_title": "Standard German NDA: Injunctive Relief",
-    "clause_text": "In the event of an actual or threatened breach of this Agreement by the Receiving Party, the\nDisclosing Party shall be entitled to seek immediate injunctive relief and other equitable\nremedies from any court of competent jurisdiction without the necessity of proving actual standard damages or posting a bond.",
-    "clause_type": "remedies"
-  },
-  {
-  "clause_id": "C76",
-  "clause_title": "Standard German NDA: Injunctive Relief Additional",
-    "clause_text": "The right to seek injunctive relief shall be in addition to, and not in lieu of, any other remedies\navailable to the Disclosing Party at law or in equity, including monetary damages.",
-    "clause_type": "remedies"
-  },
-  {
-  "clause_id": "C77",
-  "clause_title": "Standard German NDA: Costs and Expenses",
-    "clause_text": "The Receiving Party shall be liable for all costs and expenses, including reasonable attorney's\nfees, incurred by the Disclosing Party in enforcing this Agreement or in obtaining any remedy for\nbreach thereof.",
-    "clause_type": "remedies"
-  },
-  {
-  "clause_id": "C78",
-  "clause_title": "Standard German NDA: Survival of Remedies",
-    "clause_text": "The remedies set forth in this Section 9 shall survive termination of this Agreement.",
-    "clause_type": "remedies"
-  },
-  {
-  "clause_id": "C79",
-  "clause_title": "Standard German NDA: Governing Law",
+    "jurisdiction": "Germany",
+    "clause_id": "C30",
+    "clause_title": "Standard German NDA: Governing Law",
     "clause_text": "This Agreement shall be governed by and construed in accordance with the laws of the Federal\nRepublic of Germany.",
     "clause_type": "governing_law"
   },
   {
-  "clause_id": "C80",
-  "clause_title": "Standard German NDA: Jurisdiction",
+    "jurisdiction": "Germany",
+    "clause_id": "C31",
+    "clause_title": "Standard German NDA: Definition of Affiliate",
+    "clause_text": "\"Affiliate\" means, with respect to any Party, any entity that directly or indirectly controls, is\ncontrolled by, or is under common control with such Party, where \"control\" means the\npossession, directly or indirectly, of the power to direct or cause the direction of the\nmanagement and policies of such entity, whether through ownership of voting securities, by\ncontract or otherwise.",
+    "clause_type": "definition"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C32",
+    "clause_title": "Standard German NDA: Definition of Confidential Information",
+    "clause_text": "\"Confidential Information\" means all information, data, materials, and documentation of any\nkind, whether written, oral, electronic, visual, or in any other form, that is disclosed by the\nDisclosing Party to the Receiving Party, including but not limited to technical data, trade secrets,\nknow-how, research, product plans, products, services, customers, customer lists, markets,\nsoftware, developments, inventions, processes, formulas, technology, designs, drawings,\nengineering, hardware configuration information, marketing, finances, or other business\ninformation.",
+    "clause_type": "definition"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C33",
+    "clause_title": "Standard German NDA: Definition of Disclosing Party",
+    "clause_text": "\"Disclosing Party\" means the Party disclosing Confidential Information under this Agreement,\nas identified in the Parties section above.",
+    "clause_type": "definition"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C34",
+    "clause_title": "Standard German NDA: Definition of Effective Date",
+    "clause_text": "\"Effective Date\" means [EFFECTIVE DATE] .",
+    "clause_type": "definition"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C35",
+    "clause_title": "Standard German NDA: Definition of Purpose",
+    "clause_text": "\"Purpose\" means [PURPOSE OF DISCLOSURE] .",
+    "clause_type": "definition"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C36",
+    "clause_title": "Standard German NDA: Definition of Receiving Party",
+    "clause_text": "\"Receiving Party\" means the Party receiving Confidential Information under this Agreement,\nas identified in the Parties section above.",
+    "clause_type": "definition"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C37",
+    "clause_title": "Standard German NDA: Definition of Representatives",
+    "clause_text": "\"Representatives\" means, with respect to any Party, its directors, officers, employees, agents,\nadvisors, consultants, and professional advisers who have a legitimate need to know the\nConfidential Information for the Purpose and who are bound by confidentiality obligations no\nless restrictive than those contained in this Agreement.",
+    "clause_type": "definition"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C38",
+    "clause_title": "Standard German NDA: Definition of Third Party",
+    "clause_text": "\"Third Party\" means any person or entity other than the Disclosing Party, the Receiving Party,\nand their respective Affiliates and Representatives.",
+    "clause_type": "definition"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C39",
+    "clause_title": "Standard German NDA: Confidential Information",
+    "clause_text": "For the purposes of this Agreement, 'Confidential Information' means any and all non-public,\nproprietary, or confidential information disclosed by the Disclosing Party to the Receiving Party,\nwhether orally, in writing, electronically, or in any other form, including but not limited to:\ntechnical data, research, inventions, processes, algorithms, software, source code, object code,\nand know-how;\nbusiness information, including strategies, plans, financial information, pricing, customer lists,\nsupplier information, and market analyses;\nany information concerning the business, affairs, customers, clients, suppliers, plans, intentions,\nor market opportunities of the Disclosing Party;\nany analyses, compilations, studies, or other documents prepared by the Receiving Party that\ncontain or reflect Confidential Information.",
+    "clause_type": "confidentiality"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C40",
+    "clause_title": "Standard German NDA: Confidential Information Identification",
+    "clause_text": "Confidential Information shall be deemed to include information that has been marked or\nidentified as 'confidential,' 'proprietary,' or with a similar designation, as well as information that\nwould reasonably be understood to be confidential given the nature of the information and the\ncircumstances of disclosure.",
+    "clause_type": "confidentiality"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C41",
+    "clause_title": "Standard German NDA: Exclusions from Confidential Information",
+    "clause_text": "Confidential Information shall not include information that:\nis or becomes publicly available through no breach of this Agreement by the Receiving Party;\nwas rightfully known to the Receiving Party prior to disclosure by the Disclosing Party;\nis rightfully received by the Receiving Party from a Third Party without breach of any\nconfidentiality obligation;\nis independently developed by the Receiving Party without use of or reference to the\nConfidential Information; or\nis required to be disclosed by law or court order, provided that the Receiving Party gives the\nDisclosing Party prompt written notice of such requirement.",
+    "clause_type": "confidentiality"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C42",
+    "clause_title": "Standard German NDA: Obligations of Receiving Party",
+    "clause_text": "The Receiving Party shall hold all Confidential Information in strict confidence and shall not\ndisclose any Confidential Information to any Third Party without the prior written consent of the\nDisclosing Party.",
+    "clause_type": "confidentiality"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C43",
+    "clause_title": "Standard German NDA: Purpose of Use",
+    "clause_text": "The Receiving Party shall use the Confidential Information solely for the Purpose and shall not\nuse such information for any other purpose whatsoever.",
+    "clause_type": "usage"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C44",
+    "clause_title": "Standard German NDA: Limited Access to Confidential Information",
+    "clause_text": "The Receiving Party shall limit access to Confidential Information to those of its Representatives\nwho have a legitimate need to know such information for the Purpose and who have been\ninformed of the confidential nature of such information.",
+    "clause_type": "access_control"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C45",
+    "clause_title": "Standard German NDA: Confidentiality Obligations of Representatives",
+    "clause_text": "The Receiving Party shall ensure that all Representatives who have access to Confidential\nInformation are bound by confidentiality obligations no less restrictive than those contained in\nthis Agreement.",
+    "clause_type": "confidentiality"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C46",
+    "clause_title": "Standard German NDA: Restrictions on Copying and Reproduction",
+    "clause_text": "The Receiving Party shall not copy, reproduce, or create derivative works from any Confidential\nInformation except to the extent reasonably necessary for the Purpose.",
+    "clause_type": "usage"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C47",
+    "clause_title": "Standard German NDA: Reverse Engineering Prohibition",
+    "clause_text": "The Receiving Party shall not reverse engineer, disassemble, or decompile any Confidential\nInformation, including but not limited to any software, technical data, or proprietary processes\ndisclosed by the Disclosing Party.",
+    "clause_type": "restriction"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C48",
+    "clause_title": "Standard German NDA: Notification of Unauthorized Disclosure",
+    "clause_text": "The Receiving Party shall immediately notify the Disclosing Party in writing upon becoming\naware of any unauthorized use or disclosure of Confidential Information and shall cooperate\nwith the Disclosing Party in any efforts to prevent or remedy such breach.",
+    "clause_type": "notification"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C49",
+    "clause_title": "Standard German NDA: Permitted Disclosures - Prior Knowledge",
+    "clause_text": "The obligations set forth in Section 3 shall not apply to any Confidential Information that the\nReceiving Party can demonstrate by written records:\nwas known to the Receiving Party prior to disclosure by the Disclosing Party;\nis or becomes publicly available through no breach of this Agreement by the Receiving Party;\nis rightfully received by the Receiving Party from a Third Party without breach of any\nconfidentiality obligation;\nis independently developed by the Receiving Party without use of or reference to the\nConfidential Information.",
+    "clause_type": "exception"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C50",
+    "clause_title": "Standard German NDA: Permitted Disclosures - Legal Requirement",
+    "clause_text": "The Receiving Party may disclose Confidential Information if and to the extent such disclosure\nis required by law , court order, or governmental regulation, provided that the Receiving Party:\ngives the Disclosing Party prompt written notice of such requirement;\ncooperates with the Disclosing Party in seeking a protective order or other appropriate remedy;\nand\ndiscloses only that portion of the Confidential Information that is legally required to be disclosed.",
+    "clause_type": "exception"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C51",
+    "clause_title": "Standard German NDA: Permitted Disclosures - To Representatives",
+    "clause_text": "The Receiving Party may disclose Confidential Information to its Representatives who have a\nlegitimate need to know such information for the Purpose, provided that such Representatives\nare bound by confidentiality obligations no less restrictive than those contained herein.",
+    "clause_type": "exception"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C52",
+    "clause_title": "Standard German NDA: Permitted Disclosures - With Consent",
+    "clause_text": "The Receiving Party may disclose Confidential Information with the prior written consent of the\nDisclosing Party, subject to any conditions specified in such consent.",
+    "clause_type": "exception"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C53",
+    "clause_title": "Standard German NDA: StaStandard German NDA:rd of Care",
+    "clause_text": "The Receiving Party shall protect and safeguard the Confidential Information using the same\ndegree of care that it uses to protect its own confidential and proprietary information, but in no\nevent less than reasonable care.",
+    "clause_type": "due_diligence"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C54",
+    "clause_title": "Standard German NDA: Prevention of Unauthorized Disclosure",
+    "clause_text": "The Receiving Party shall take all reasonable precautions to prevent any unauthorized\ndisclosure, publication, or dissemination of the Confidential Information.",
+    "clause_type": "due_diligence"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C55",
+    "clause_title": "Standard German NDA: Representatives' Awareness of Confidentiality",
+    "clause_text": "The Receiving Party shall ensure that its Representatives who have access to the Confidential\nInformation are informed of the confidential nature of such information and are bound by\nconfidentiality obligations at least as restrictive as those contained in this Agreement.",
+    "clause_type": "due_diligence"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C56",
+    "clause_title": "Standard German NDA: Liability for Representatives' Breach",
+    "clause_text": "The Receiving Party shall be liable for any breach of this Agreement by its Representatives as if\nsuch breach had been committed by the Receiving Party itself.",
+    "clause_type": "liability"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C57",
+    "clause_title": "Standard German NDA: Notification of Unauthorized Use or Disclosure",
+    "clause_text": "The Receiving Party shall immediately notify the Disclosing Party in writing upon becoming\naware of any unauthorized use or disclosure of the Confidential Information.",
+    "clause_type": "notification"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C58",
+    "clause_title": "Standard German NDA: Return or Destruction of Information",
+    "clause_text": "Upon written request by the Disclosing Party, or upon termination or expiration of this\nAgreement, the Receiving Party shall promptly return to the Disclosing Party all documents,\nmaterials, and other tangible items containing or representing Confidential Information.",
+    "clause_type": "return_of_information"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C59",
+    "clause_title": "Standard German NDA: Destruction of Copies",
+    "clause_text": "In addition to the return obligation under clause 6.1, the Receiving Party shall destroy all copies,\nextracts, summaries, analyses, and other materials in any form that contain or are derived from\nConfidential Information, including electronic copies stored on computers, servers, or other\nstorage media.",
+    "clause_type": "return_of_information"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C60",
+    "clause_title": "Standard German NDA: Secure Destruction",
+    "clause_text": "The destruction required under clause 6.2 shall be carried out in a secure manner that prevents\nrecovery or reconstruction of the Confidential Information.",
+    "clause_type": "return_of_information"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C61",
+    "clause_title": "Standard German NDA: Certification of Return/Destruction",
+    "clause_text": "Within thirty (30) days of completion of the return and destruction obligations, the Receiving\nParty shall provide written certification to the Disclosing Party confirming that all Confidential\nInformation has been returned or destroyed in accordance with this clause 6.",
+    "clause_type": "return_of_information"
+  },
+  {
+    "jurisdiction": "Germany",
+    "clause_id": "C62",
+    "clause_title": "Standard German NDA: Exception for Legally Required Copies",
+    "clause_text": "Notwithstanding the foregoing, the Receiving Party may retain copies of Confidential Information\nto the extent required by applicable law or regulation, provided that such retained information\nremains subject to the confidentiality obligations of this Agreement.",
+    "clause_type": "return_of_information"
+  },
+  {
+    "clause_id": "C63",
+    "clause_title": "Standard German NDA: Application to Representatives",
+    "clause_text": "The obligations set forth in this clause 6 shall also apply to all Representatives of the Receiving\nParty who have had access to Confidential Information.",
+    "clause_type": "return_of_information"
+  },
+  {
+    "clause_id": "C64",
+    "clause_title": "Standard German NDA: No License or Rights Granted",
+    "clause_text": "Nothing in this Agreement shall be construed as granting, by implication, estoppel or otherwise,\nany license or right under any patent, copyright, trademark, trade secret or other intellectual\nproperty right of the Disclosing Party.",
+    "clause_type": "intellectual_property"
+  },
+  {
+    "clause_id": "C65",
+    "clause_title": "Standard German NDA: No Representation or Warranty",
+    "clause_text": "The disclosure of Confidential Information under this Agreement shall not constitute any\nrepresentation, warranty, assurance, guarantee or inducement by the Disclosing Party of any\nkind with respect to the Confidential Information, including without limitation regarding its\naccuracy, completeness, or freedom from defect.",
+    "clause_type": "warranty"
+  },
+  {
+    "clause_id": "C66",
+    "clause_title": "Standard German NDA: Limited Rights",
+    "clause_text": "No rights or licenses are granted to the Receiving Party other than the limited right to evaluate\nthe Confidential Information solely for the Purpose as defined herein.",
+    "clause_type": "rights"
+  },
+  {
+    "clause_id": "C67",
+    "clause_title": "Standard German NDA: Ownership of Intellectual Property",
+    "clause_text": "The Receiving Party acknowledges that any intellectual property rights in the Confidential\nInformation remain the exclusive property of the Disclosing Party or its licensors.",
+    "clause_type": "intellectual_property"
+  },
+  {
+    "clause_id": "C68",
+    "clause_title": "Standard German NDA: Term and Termination",
+    "clause_text": "This Agreement shall commence on the Effective Date and shall continue in force for a period of\nthree (3) years , unless terminated earlier in accordance with the provisions of this Agreement.",
+    "clause_type": "term_and_termination"
+  },
+  {
+    "clause_id": "C69",
+    "clause_title": "Standard German NDA: Termination on Notice",
+    "clause_text": "Either Party may terminate this Agreement at any time by giving thirty (30) days prior written\nnotice to the other Party.",
+    "clause_type": "term_and_termination"
+  },
+  {
+    "clause_id": "C70",
+    "clause_title": "Standard German NDA: Survival of Obligations",
+    "clause_text": "The obligations of the Receiving Party under this Agreement shall survive termination of this\nAgreement and shall continue for a period of five (5) years from the date of termination, or until\nsuch time as the Confidential Information becomes publicly available through no breach of this\nAgreement by the Receiving Party, whichever occurs first.",
+    "clause_type": "term_and_termination"
+  },
+  {
+    "clause_id": "C71",
+    "clause_title": "Standard German NDA: Survival of Specific Sections",
+    "clause_text": "Upon termination of this Agreement, the provisions of Sections 6 (Return or Destruction of\nInformation), 9 (Remedies and Injunctive Relief), 10 (Governing Law and Jurisdiction), and 11\n(Severability) shall survive and remain in full force and effect.",
+    "clause_type": "term_and_termination"
+  },
+  {
+    "clause_id": "C72",
+    "clause_title": "Standard German NDA: Liability Before Termination",
+    "clause_text": "Termination of this Agreement shall not relieve either Party of any liability for breach of this\nAgreement occurring prior to such termination.",
+    "clause_type": "term_and_termination"
+  },
+  {
+    "clause_id": "C73",
+    "clause_title": "Standard German NDA: Acknowledgement of Irreparable Harm",
+    "clause_text": "The Receiving Party acknowledges that any breach of this Agreement may cause irreparable\nharm to the Disclosing Party for which monetary damages would be inadequate compensation.",
+    "clause_type": "remedies"
+  },
+  {
+    "clause_id": "C74",
+    "clause_title": "Standard German NDA: Injunctive Relief",
+    "clause_text": "In the event of an actual or threatened breach of this Agreement by the Receiving Party, the\nDisclosing Party shall be entitled to seek immediate injunctive relief and other equitable\nremedies from any court of competent jurisdiction without the necessity of proving actual standard damages or posting a bond.",
+    "clause_type": "remedies"
+  },
+  {
+    "clause_id": "C75",
+    "clause_title": "Standard German NDA: Injunctive Relief Additional",
+    "clause_text": "The right to seek injunctive relief shall be in addition to, and not in lieu of, any other remedies\navailable to the Disclosing Party at law or in equity, including monetary damages.",
+    "clause_type": "remedies"
+  },
+  {
+    "clause_id": "C76",
+    "clause_title": "Standard German NDA: Costs and Expenses",
+    "clause_text": "The Receiving Party shall be liable for all costs and expenses, including reasonable attorney's\nfees, incurred by the Disclosing Party in enforcing this Agreement or in obtaining any remedy for\nbreach thereof.",
+    "clause_type": "remedies"
+  },
+  {
+    "clause_id": "C77",
+    "clause_title": "Standard German NDA: Survival of Remedies",
+    "clause_text": "The remedies set forth in this Section 9 shall survive termination of this Agreement.",
+    "clause_type": "remedies"
+  },
+  {
+    "clause_id": "C78",
+    "clause_title": "Standard German NDA: Jurisdiction",
     "clause_text": "Any dispute, controversy or claim arising out of or relating to this Agreement, or the breach,\ntermination or invalidity thereof, shall be subject to the exclusive jurisdiction of the competent\ncourts of [CITY] , Germany.",
     "clause_type": "jurisdiction"
   },
   {
-  "clause_id": "C81",
-  "clause_title": "Standard German NDA: Submission to Jurisdiction",
+    "clause_id": "C79",
+    "clause_title": "Standard German NDA: Submission to Jurisdiction",
     "clause_text": "The Parties hereby irrevocably submit to the jurisdiction of such courts and waive any objection\nto proceedings in such courts on the grounds of venue or on the grounds that the proceedings\nhave been brought in an inconvenient forum.",
     "clause_type": "jurisdiction"
   },
   {
-  "clause_id": "C82",
-  "clause_title": "Standard German NDA: Interim Relief",
+    "clause_id": "C80",
+    "clause_title": "Standard German NDA: Interim Relief",
     "clause_text": "This choice of law and jurisdiction shall not prevent either Party from seeking interim or\nprovisional relief in any jurisdiction where assets of the other Party may be found.",
     "clause_type": "jurisdiction"
   },
   {
-  "clause_id": "C83",
-  "clause_title": "Standard German NDA: Severability",
+    "clause_id": "C81",
+    "clause_title": "Standard German NDA: Severability",
     "clause_text": "If any provision of this Agreement is held to be invalid, illegal or unenforceable by a court of\ncompetent jurisdiction, such provision shall be deemed severed from this Agreement and the\nvalidity, legality and enforceability of the remaining provisions shall not be affected or impaired\nthereby.",
     "clause_type": "severability"
   },
   {
-  "clause_id": "C84",
-  "clause_title": "Standard German NDA: Replacement of Invalid Provision",
+    "clause_id": "C82",
+    "clause_title": "Standard German NDA: Replacement of Invalid Provision",
     "clause_text": "In the event that any provision is deemed invalid, illegal or unenforceable, the Parties shall\nnegotiate in good faith to replace such provision with a valid, legal and enforceable provision\nthat most closely reflects the original intent of the Parties.",
     "clause_type": "severability"
   },
   {
-  "clause_id": "C85",
-  "clause_title": "Standard German NDA: Termination due to Severability",
+    "clause_id": "C83",
+    "clause_title": "Standard German NDA: Termination due to Severability",
     "clause_text": "If the severed provision is essential to the performance of this Agreement such that its removal\nwould fuStandard German NDA:mentally alter the nature or purpose of this Agreement, either Party may terminate\nthis Agreement upon thirty (30) days' written notice to the other Party.",
     "clause_type": "severability"
   },
   {
-  "clause_id": "C86",
-  "clause_title": "Standard German NDA: Entire Agreement",
+    "clause_id": "C84",
+    "clause_title": "Standard German NDA: Entire Agreement",
     "clause_text": "This Agreement constitutes the entire agreement between the Parties with respect to the\nsubject matter hereof and supersedes all prior negotiations, representations, or agreements\nrelating to such subject matter, whether written or oral.",
     "clause_type": "entire_agreement"
   },
   {
-  "clause_id": "C87",
-  "clause_title": "Standard German NDA: Amendment in Writing",
+    "clause_id": "C85",
+    "clause_title": "Standard German NDA: Amendment in Writing",
     "clause_text": "No amendment, modification, or waiver of any provision of this Agreement shall be effective\nunless made in writing and signed by both Parties.",
     "clause_type": "amendment"
   },
   {
-  "clause_id": "C88",
-  "clause_title": "Standard German NDA: No Waiver",
+    "clause_id": "C86",
+    "clause_title": "Standard German NDA: No Waiver",
     "clause_text": "Any waiver of a breach of any provision of this Agreement shall not constitute a waiver of any\nother breach of the same or any other provision.",
     "clause_type": "waiver"
   }

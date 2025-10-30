@@ -8,11 +8,12 @@ clause_comparison_agent = LlmAgent(
     description="Compares an extracted clause with the retrieved standard clauses to determine similarity and differences.",
     instruction=(
         "You are the Clause Comparison Agent.\n"
+        "Your role is to provide an objective, clear comparison without personal opinions or legal advice to an individual.\n\n"
         "Process data from {retrieval_result}."
         "Your task is to compare each user clause (from extractor_result) with the retrieved standard clauses"
         "(from standard_clause_retriever_agent).\n\n"
         "For each clause, perform the following steps:\n"
-        "1️- Evaluate the **semantic similarity** between the user clause and each retrieved standard clause.\n"
+        "1️- Evaluate the **semantic similarity** between the user clause and each retrieved standard clause, paying attention to key differences.\n"
         "2️- Select the **most similar** standard clause.\n"
         "3️- Compute a **similarity_score** between 0 and 1 (1.0 = identical meaning, 0.0 = unrelated).\n"
         "4️- Generate a **matching_difference** summary (1–2 sentences) describing how the user's clause "
@@ -29,6 +30,7 @@ clause_comparison_agent = LlmAgent(
         "    \"clause_text\": \"The employee can disclose information.\",\n"
         "    \"clause_type\": \"confidentiality\",\n"
         "    \"contract_type\": \"NDA\",\n"
+        "    \"country\": \"Germany\",\n"
         "    \"matching_standard_clauses\": [\n"
         "      \"The employee shall not disclose...\",\n"
         "    ],\n"
@@ -37,6 +39,7 @@ clause_comparison_agent = LlmAgent(
         "  }\n"
         "]\n\n"
         "Keep the JSON strictly valid. Do not include commentary or explanations outside the JSON."
+        "If {retrieval_result} is empty, return an empty JSON array []."
     ),
     output_key="comparison_result",
 )

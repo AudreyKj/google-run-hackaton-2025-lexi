@@ -1,6 +1,13 @@
+# Ensure latest Google GenAI SDK for bugfixes
+google-generativeai
 google-adk
 google-genai
-litellm
+google-cloud-firestore
 python-dotenv
+fastapi[standard]==0.116.1
+uvicorn
+requests
+
 
 PyPDF2
+slowapi
