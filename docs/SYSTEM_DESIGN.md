@@ -38,8 +38,9 @@
                      │--------------------------------------------│
                      │  🧭 CoreOrchestrator (LLM)                 │
                      │     ├── ClauseAnalysisWorkflow (Sequential)│
-                     │     │     ├─ ClauseExtractorAgent (LLM)    │
-                     │     │     ├─ ClauseComparisonAgent (Embed) │
+                     │     │     ├─ ClauseExtractorAgent (LLM) 
+                                StandardClauseRetriever ((Embed))   │
+                     │     │     ├─ ClauseComparisonAgent  │
                      │     │     └─ RiskAnalysisAgent (LLM)       │         │
                      └────────────────────────────────────────────┘
                                            │

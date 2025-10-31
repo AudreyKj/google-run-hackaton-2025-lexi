@@ -50,7 +50,7 @@ for filename in os.listdir(STANDARD_DOCS_FOLDER):
         if not isinstance(clauses, list):
             raise ValueError("Expected a list of clauses")
 
-        collection_name = filename.replace(".json", "")
+        collection_name = "employment_standard_clauses"
         clauses_ref = db.collection(collection_name)
 
         for clause in clauses:

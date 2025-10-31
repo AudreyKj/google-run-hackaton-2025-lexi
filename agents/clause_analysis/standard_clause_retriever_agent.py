@@ -1,5 +1,4 @@
 from google.adk.agents.llm_agent import Agent
-from google.adk.models.lite_llm import LiteLlm
 from google import genai
 from google.genai.types import EmbedContentConfig
 from utils.constants import MODEL_GEMINI_2_0_FLASH
@@ -104,6 +103,7 @@ standard_clause_retriever_agent = Agent(
         "Process data from {extractor_result}."
         "Your role is to match each extracted clause with the most semantically similar "
         "standard clause from Firestore using the 'find_similar_clauses' tool.\n\n"
+        "The current clause and matched clause cannot be identical.\n\n"
         "Return the result as a JSON array in the output_key:\n"
         "[\n"
         "  {\n"

@@ -19,9 +19,10 @@ app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # Enable CORS for the specified frontend origin
+FRONTEND_ORIGIN = "https://lexi-ai-legal-assistant-142471449149.us-west1.run.app"
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://lexi-ai-legal-assistant-142471449149.us-west1.run.app"],
+    allow_origins=[FRONTEND_ORIGIN],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
