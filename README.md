@@ -89,9 +89,10 @@ Clean React UI, deployed on Google Cloud Run.
                            Streamed JSON → FastAPI → React (UI updates)
 
 **2 services deployed separately to Cloud Run:**
-- Frontend: React 
-- Backend: FastAPI (this repository)
-  
+- --> Frontend: React 
+- --> Backend: FastAPI (this repository)
+
+
 - Storage: Firestore (for embeddings) 
 - LLMs: gemini-embedding-001, gemini-2.0-flash  
 - OCR: PDF text extraction (in-memory)
