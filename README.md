@@ -112,7 +112,8 @@ Clean React UI, deployed on Google Cloud Run.
 
 🧭 Agents work collaboratively via an orchestrator and shared state.
 
-## How it works 
+### How it works 
+
 	•	**Standard legal clauses** are embedded in Firestore. For now, only employment-related contracts in English under German law are used (see the data folder in the codebase for the JSON data and the embedding script).
 	•	The user uploads a contract on the frontend service.
 	•	Before the agents are invoked, a **guardrail** double-checks the input to ensure it’s safe.
