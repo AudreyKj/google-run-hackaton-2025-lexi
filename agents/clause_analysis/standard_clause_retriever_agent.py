@@ -86,11 +86,17 @@ def find_similar_clauses(
             if r.to_dict().get("clause_text")
         ]
 
-        return similar_clauses[0]
+        # Remove any clause that is identical to the input
+        filtered_clauses = [c for c in similar_clauses if c.strip() != clause_text.strip()]
+
+        if filtered_clauses:
+            return filtered_clauses[0]
+        else:
+            return "No suitable standard clause found."
 
     except Exception as e:
         print("⚠️ Firestore vector search failed, fallback to empty list:", e)
-        return []
+        return "No suitable standard clause found."
 
 # --- Agent Definition ---
 standard_clause_retriever_agent = Agent(

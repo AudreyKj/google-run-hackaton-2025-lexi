@@ -44,6 +44,9 @@ All processing is in-memory — your documents and data are never saved.
 📈 Guardrails for Safety  
 Built-in protections against malicious or unsafe inputs.
 
+📈 Rate limiting for the API
+Prevents from abuse
+
 📤 Seamless Frontend Delivery  
 Clean React UI, deployed on Google Cloud Run.
 
