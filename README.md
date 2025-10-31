@@ -124,6 +124,16 @@ Then, start the FastAPI server:
 uvicorn api.main:app --reload --port 8080
 ```
 
+For testing, you can send the demo contract:
+
+```
+curl -X POST "http://localhost:8080/contracts/analyze" \
+  -H "accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@test_contract_demo.pdf" \
+  -F "session_id=demo-session" \
+  -F "user_id=demo-user"
+```
 
 ## Challenges
 
