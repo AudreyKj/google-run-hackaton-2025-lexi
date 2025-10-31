@@ -114,13 +114,12 @@ Clean React UI, deployed on Google Cloud Run.
 
 ### How it works 
 
-	•	**Standard legal clauses** are embedded in Firestore. For now, only employment-related contracts in English under German law are used (see the data folder in the codebase for the JSON data and the embedding script).
-	•	The user uploads a contract on the frontend service.
-	•	Before the agents are invoked, a **guardrail** double-checks the input to ensure it’s safe.
-	•	The **agent team** successively extracts, finds similar standard clauses, compares them and analyzes the clause's risk.
-	•	Each agent processes the output of the previous agent and enriches it with its specific task.
-	•	The API streams the response to the frontend to reduce perceived latency.
-
+•	**Standard legal clauses** are embedded in Firestore. For now, only employment-related contracts in English under German law are used (see the data folder in the codebase for the JSON data and the embedding script).
+•	The user uploads a contract on the frontend service.
+•	Before the agents are invoked, a **guardrail** double-checks the input to ensure it’s safe.
+•	The **agent team** successively extracts, finds similar standard clauses, compares them and analyzes the clause's risk.
+•	Each agent processes the output of the previous agent and enriches it with its specific task.
+•	The API streams the response to the frontend to reduce perceived latency.
 
 ## Installation
 To run the agents, clone the repository and install the dependencies:
