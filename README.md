@@ -88,9 +88,11 @@ Clean React UI, deployed on Google Cloud Run.
                                            ▼
                            Streamed JSON → FastAPI → React (UI updates)
 
-- Frontend: React (Google Cloud Run)  
-- Backend: FastAPI (Google Cloud Run)  
-- Storage: Firestore (for embeddings)  
+2 services deployed separately to Cloud Run:
+- Frontend: React 
+- Backend: FastAPI (this repository)
+- 
+- Storage: Firestore (for embeddings) 
 - LLMs: gemini-embedding-001, gemini-2.0-flash  
 - OCR: PDF text extraction (in-memory)
 - Docker for containerization
@@ -109,6 +111,14 @@ Clean React UI, deployed on Google Cloud Run.
 | RiskAnalysisAgent       | Explains potential issues in plain language               |
 
 🧭 Agents work collaboratively via an orchestrator and shared state.
+
+## How it works 
+	•	**Standard legal clauses** are embedded in Firestore. For now, only employment-related contracts in English under German law are used (see the data folder in the codebase for the JSON data and the embedding script).
+	•	The user uploads a contract on the frontend service.
+	•	Before the agents are invoked, a **guardrail** double-checks the input to ensure it’s safe.
+	•	The **agent team** successively extracts, finds similar standard clauses, compares them and analyzes the clause's risk.
+	•	Each agent processes the output of the previous agent and enriches it with its specific task.
+	•	The API streams the response to the frontend to reduce perceived latency.
 
 
 ## Installation
