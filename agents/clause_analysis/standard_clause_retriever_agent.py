@@ -40,9 +40,8 @@ def getEmbeddingForClause(clause_text: str):
     return embedding
 
 
-async def find_similar_clauses(
+def find_similar_clauses(
     clause: dict,
-    collection_name: str = "employment_standard_clauses",
     top_k: int = 2
 ):
     """
@@ -87,8 +86,7 @@ async def find_similar_clauses(
             if r.to_dict().get("clause_text")
         ]
 
-        print(f"✅ Found {len(similar_clauses)} similar clauses.")
-        return similar_clauses
+        return similar_clauses[0]
 
     except Exception as e:
         print("⚠️ Firestore vector search failed, fallback to empty list:", e)

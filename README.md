@@ -1,158 +1,147 @@
-# How multi-agent works with google-adk
 
-## 🧩 1. Core Concept
+📘 Lexi — Multi-Agent Legal Document Assistant
 
-The **Google ADK** is designed to let you create multiple AI agents — each specialized for a particular domain or task — and then **compose** them under a **root (or orchestrator) agent**.
+## Table of Contents
 
-Think of it like a company structure:
+- [Features](#features)
+- [Multi-Agent System Overview](#multi-agent-system-overview)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Inspiration](#inspiration)
+- [What it does](#what-it-does)
+- [How we built it](#how-we-built-it)
+- [Challenges we ran into](#challenges-we-ran-into)
+- [Accomplishments that we’re proud of](#accomplishments-that-were-proud-of)
+- [What we learned](#what-we-learned)
+- [What’s next for Lexi](#whats-next-for-lexi)
 
-```
-Root Agent (CEO)
-│
-├── Greeting Agent (welcomes users)
-├── Farewell Agent (says goodbye)
-└── Weather Agent (fetches weather info)
-```
+Lexi is an intelligent multi-agent platform designed to democratize access to legal document analysis for individuals. 
 
-The root agent decides *which sub-agent* to delegate a query to, based on the user’s input and the descriptions you give to each agent.
+Built for the Google Cloud Run Hackathon, Lexi offers clause-by-clause contract analysis, risk detection, plain-language explanations, and real-time streaming — simulating the experience of a legal expert, but powered entirely by AI.
 
----
+## Features
+✍️ AI-powered Clause Analysis  
+Analyzes each contract clause for meaning, risk, and compliance.
 
-## ⚙️ 2. Structure Overview
+📚 Standard Clause Comparison  
+Compares your clauses to reference legal standards using embeddings.
 
-A multi-agent setup usually follows this pattern:
+🧪 Risk Detection & Explanation  
+Highlights potential risks and explains them in plain, human-friendly language.
 
-```python
-from google.adk import Agent, Tool
+🧩 Multi-Agent Orchestration  
+Specialized agents for extraction, comparison, and risk analysis, coordinated by a root orchestrator.
 
-# Define tools (functions that agents can use)
-@Tool
-def say_hello(name: str = None) -> str:
-    return f"Hello, {name or 'there'}!"
+🎓 Plain-Language Summaries  
+Translates legalese into clear, actionable insights.
 
-@Tool
-def get_weather(city: str) -> dict:
-    if city.lower() == "new york":
-        return {"status": "success", "report": "Sunny, 25°C"}
-    return {"status": "error", "error_message": f"No info for {city}."}
+🎥 Real-Time Streaming UI  
+Frontend streams analysis results as they’re generated for a smooth, interactive experience.
 
-# Create specialized sub-agents
-greeting_agent = Agent(
-    name="greeting_agent",
-    model="gemini-2.0-flash",
-    description="Handles greetings and introductions",
-    tools=[say_hello],
-)
+🗣️ No Data Stored  
+All processing is in-memory — your documents and data are never saved.
 
-farewell_agent = Agent(
-    name="farewell_agent",
-    model="gemini-2.0-flash",
-    description="Handles goodbyes",
-    tools=[],
-)
+📈 Guardrails for Safety  
+Built-in protections against malicious or unsafe inputs.
 
-weather_agent = Agent(
-    name="weather_agent",
-    model="gemini-2.0-flash",
-    description="Provides weather information",
-    tools=[get_weather],
-)
+📤 Seamless Frontend Delivery  
+Clean React UI, deployed on Google Cloud Run.
 
-# Create root agent and register sub-agents
-root_agent = Agent(
-    name="weather_agent_v2",
-    model="gemini-2.0-flash",
-    description="Main agent coordinating greeting, farewell, and weather agents.",
-    subagents=[greeting_agent, farewell_agent, weather_agent],
-)
-```
+## Architecture diagram
 
----
+                           ┌───────────────────────────────┐
+                           │        Frontend (React)       │
+                           │-------------------------------│
+                           │ • Upload contract (PDF/Text)  │
+                           │ • View clause analysis (live) │
+                           │                               │
+                           └──────────────┬────────────────┘
+                                          │
+                        JSON POST /contracts/analyze
+                                          │
+                                          ▼
+                            ┌───────────────────────────────┐
+                            │         FastAPI Backend       │
+                            │        (Runs on Cloud Run)    │
+                            │-------------------------------│
+                            │ 1️⃣ Receives contract payload  │
+                            │ 2️⃣ Extracts text (if PDF)     │
+                            │ 3️⃣ Sends to CoreOrchestrator  │
+                            │ 4️⃣ Streams structured JSON     │
+                            │     chunks back to frontend   │
+                            └──────────────┬────────────────┘
+                                           │
+                                           ▼
+                     ┌────────────────────────────────────────────┐
+                     │       Google ADK Agent System (Vertex AI)  │
+                     │--------------------------------------------│
+                     │ 🧭 CoreOrchestrator (LLM)                  │
+                     │     ├─ ClauseAnalysisWorkflow (Sequential) │
+                     │     │    ├─ ClauseExtractorAgent (LLM)     │
+                     │     │    ├─ StandardClauseRetriever (Embed)│
+                     │     │    ├─ ClauseComparisonAgent (LLM)    │
+                     │     │    └─ RiskAnalysisAgent (LLM)        │
+                     │                                            │
+                     └────────────────────────────────────────────┘
+                                           │
+                                           ▼
+                           Streamed JSON → FastAPI → React (UI updates)
 
-## 🧠 3. How the Root Agent Works
+- Frontend: React (Google Cloud Run)  
+- Backend: FastAPI (Google Cloud Run)  
+- Storage: Firestore (for embeddings)  
+- LLMs: gemini-embedding-001, gemini-2.0-flash  
+- OCR: PDF text extraction (in-memory)
+- Docker for containerization
+- Cloud Run for deployment
 
-When you send a query to the **root agent**, it goes through these internal steps:
+## Multi-agent system overview
 
-1. **Intent Understanding**
-   The root agent’s model (e.g. Gemini) analyzes the user message:
+| Agent                      | Role                                                      |
+|----------------------------|-----------------------------------------------------------|            |
+| RootOrchestratorAgent      | Coordinates all specialized agents                        |
+| SequentialAgent            | Ensures agents process clauses in the correct order        |
+| ClauseExtractorAgent       | Identifies and extracts each clause from the document      |
+| StandardClauseRetriever    | Finds reference clauses using Firestore embeddings         |
+| ComparisonAgent            | Detects deviations from standard clauses                   |
+| RiskAnalysisAgent          | Explains potential issues in plain language    
 
-   > “What’s the weather in London?”
-   > → detects it’s a *weather-related* query.
+🧭 Agents work collaboratively via an orchestrator and shared state.
 
-2. **Delegation / Routing**
-   It looks at the available **sub-agent descriptions** (metadata you provided when defining them) and chooses the most relevant one — in this case, `weather_agent`.
+🏃‍♀️ Installation
+To run the agents, clone the repository and install the dependencies:
 
-3. **Execution**
-   The root agent then forwards the query to the `weather_agent`, which may call one of its registered **tools** (like `get_weather()`).
-
-4. **Aggregation & Response**
-   Once the sub-agent returns a result, the root agent aggregates it into a final natural-language response and returns it to the user.
-
----
-
-## 🧰 4. Tools vs Agents
-
-* **Tools** are Python functions that perform concrete actions (e.g., fetch data, do math, call APIs).
-* **Agents** are reasoning layers that *decide when and how* to call those tools — powered by a model like Gemini.
-
-You can think of sub-agents as “smart wrappers” around groups of related tools.
-
----
-
-## 🔗 5. Chaining Example
-
-For instance, if you ask:
-
-> “Hi, what’s the weather in New York?”
-
-The call chain looks like this:
-
-```
-Root Agent (weather_agent_v2)
-  ↳ Greeting Agent (say_hello) → "Hello there!"
-  ↳ Weather Agent (get_weather) → "Sunny, 25°C"
-Root Agent → combines both results → "Hello there! The weather in New York is sunny, 25°C."
-```
-
-The ADK handles this orchestration automatically through the Gemini model’s reasoning layer — you don’t have to manually route messages between agents.
-
----
-
-## 🚀 6. Async Execution
-
-All agent execution is **async** under the hood (`asyncio.run()` in your logs).
-That’s why you see:
-
-```
-Executing using asyncio.run()...
+```bash
+pip install -r requirements.txt
 ```
 
-This allows the root agent to delegate multiple tasks in parallel — for instance, querying multiple APIs simultaneously through different sub-agents.
+Then, start the FastAPI server:
 
----
-
-## 🧩 7. Multi-Agent Design Benefits
-
-| Benefit                    | Description                                                            |
-| -------------------------- | ---------------------------------------------------------------------- |
-| **Separation of concerns** | Each agent is focused on one domain (e.g., weather, shopping, travel). |
-| **Scalability**            | You can easily add or remove sub-agents without touching the root.     |
-| **Composability**          | Agents can collaborate — one agent’s output can feed another.          |
-| **Explainability**         | Logs clearly show which agent handled which part of the query.         |
-
----
-
-## 🧠 8. Optional: Hierarchical Agents
-
-You can even create multi-level hierarchies:
-
-```
-Root Agent
-  ├── Customer Service Agent
-  │    ├── Billing Agent
-  │    ├── Shipping Agent
-  │    └── Returns Agent
-  └── Product Info Agent
+```bash
+uvicorn api.main:app --reload --port 8080
 ```
 
-Each layer delegates further down as needed.
+## 🚧 Challenges
+
+* Integrating **ADK**, **FastAPI**, and **embeddings** in a single workflow.
+* Learning how to use **Firestore** effectively for storing and retrieving clause embeddings.
+* Deploying a multi-agent system seamlessly on **Google Cloud Run**.
+
+## 🏆 Accomplishments
+
+* Successfully building a complete pipeline using **ADK**, **FastAPI**, **Firestore**
+* Implementing a multi-agent orchestration system for clause analysis.
+* Learning and applying **Google ADK** — a new and powerful framework for AI agents.
+
+## 📚 What we learned
+
+* How to orchestrate and deploy multi-agent systems on **Google Cloud Run**.
+* How to build end-to-end applications powered by **AI agents** to improve real-world processes.
+* How to use **Firestore embeddings** for clause retrieval and semantic comparisons.
+
+## 🚀 What’s next for Lexi
+
+* Expand support for more document types (e.g. leases, terms of service) and countries.
+* Add conversational follow-ups — allowing users to ask Lexi specific legal questions.
+* Integrate more languages to make legal understanding accessible globally.
+* Explore secure user authentication for saved sessions and history.
