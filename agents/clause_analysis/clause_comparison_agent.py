@@ -40,6 +40,7 @@ clause_comparison_agent = LlmAgent(
         "]\n\n"
         "Keep the JSON strictly valid. Do not include commentary or explanations outside the JSON."
         "If {retrieval_result} is empty, return an empty JSON array []."
+        "If matching_standard_clauses is empty for a clause, set similarity_score to 0 and matching_difference to 'No similar standard clause found.'"
     ),
     output_key="comparison_result",
 )

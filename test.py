@@ -85,42 +85,23 @@ def find_similar_clauses(
             if r.to_dict().get("clause_text")
         ]
 
+        # Remove any clause that is identical to the input
         filtered_clauses = [c for c in similar_clauses if c.strip() != clause_text.strip()]
-        print(f"[DEBUG] Filtered similar clauses for clause_id={clause_id}: {filtered_clauses}")
+        print("Filtered similar clauses:", filtered_clauses)
 
-        return filtered_clauses
+        if filtered_clauses:
+            return filtered_clauses
+        else:
+            return "No suitable standard clause found."
 
     except Exception as e:
         print("⚠️ Firestore vector search failed, fallback to empty list:", e)
-        return []
+        return "No suitable standard clause found."
 
-# --- Agent Definition ---
-standard_clause_retriever_agent = Agent(
-        model=MODEL_GEMINI_2_0_FLASH,
-        name="standard_clause_retriever_agent",
-        instruction="""
-You are the Standard Clause Retrieval Agent. Process data from {extractor_result}.
-Your role is to match each extracted clause with the semantically similar standard clause from Firestore using the 'find_similar_clauses' tool.
-
-Return the clauses that were found in matching_standard_clauses field.
-
-Return the result as a JSON array in the output_key:
-[
-    {
-        "clause_id": "C1",
+find_similar_clauses({"clause_id": "C1",
         "clause_title": "Confidentiality",
-        "clause_text": "The employee can disclose information.",
+        "clause_text": "The employee shall not disclose...",
         "clause_type": "confidentiality",
         "contract_type": "NDA",
-        "matching_standard_clauses": [
-            "The employee shall not disclose..."
-        ]
-    }
-]
-
-This structured output will be used by the Comparator Agent for deeper analysis.
-""",
-        description="Retrieves the most similar standard clauses from Firestore using embeddings.",
-        output_key="retrieval_result",
-        tools=[find_similar_clauses],
-)
+        "country": "Germany"
+})

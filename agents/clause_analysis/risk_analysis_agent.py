@@ -22,7 +22,6 @@ risk_analysis_agent = LlmAgent(
         "    \"matching_standard_clauses\": [\n"
         "      \"The employee shall not disclose...\",\n"
         "    ],\n"
-        "    \"country\": \"Germany\",\n"
         "    \"matching_difference\": \"User clause is more permissive than standard clause.\",\n"
         "    \"similarity_score\": 0.75,\n"
         "    \"risk_level\": \"Medium\",\n"

@@ -24,7 +24,6 @@ extractor_agent = LlmAgent(
         '    "clause_text": "The employee shall not disclose...",\n'
         '    "clause_type": "confidentiality"\n'
         '    "contract_type": "NDA"\n'
-        '    "country": "Germany"\n'
         "  },\n"
         "  ...\n"
         "]\n\n"
