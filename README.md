@@ -86,12 +86,12 @@ Clean React UI, deployed on Google Cloud Run.
                                            ▼
                            Streamed JSON → FastAPI → React (UI updates)
 
-- **2 services deployed separately to Cloud Run: Frontend (built with Google AI studio) & Backend (this repository)
-- Storage: Firestore (for embeddings) 
-- LLMs: gemini-embedding-001, gemini-2.0-flash  
+- **2 services** deployed separately to Cloud Run: Frontend (built with Google AI studio) & Backend (this repository)
+- Storage: **Firestore** (for embeddings) 
+- LLMs: **gemini-embedding-001**, **gemini-2.0-flash**
 - OCR: PDF text extraction (in-memory)
 - Docker for containerization
-- Cloud Run for deployment
+- **Cloud Run** for deployment
 
 
 ## Multi-agent system overview
@@ -109,7 +109,7 @@ Clean React UI, deployed on Google Cloud Run.
 
 ### How it works 
 
-- **Standard legal clauses** are embedded in Firestore. For now, only employment-related contracts in English under German law are used for the scope of this project (see the data folder in this codebase for the JSON data and the embedding script).
+- **Standard legal clauses** are embedded in **Firestore**.For now, only employment-related contracts in English under German law are used for the scope of this project (see the data folder in this codebase for the JSON data and the embedding script).
 - The user uploads a contract on the frontend service.
 - Before the agents are invoked, a **guardrail** double-checks the input to ensure it’s safe.
 - The **agent team** successively extracts, finds similar standard clauses, compares them and analyzes the clause's risk.
