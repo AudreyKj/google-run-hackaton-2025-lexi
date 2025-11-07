@@ -13,7 +13,7 @@
 - [What we learned](#what-we-learned)
 - [What’s next for Lexi](#whats-next-for-lexi)
 
-Lexi is a multi-agent platform designed to democratize access to legal document analysis for individuals. 
+Lexi is a **multi-agent application** designed to democratize access to **legal document analysis for individuals**. 
 
 Built for the **Google Cloud Run Hackathon**, Lexi offers clause-by-clause contract analysis, risk detection, plain-language explanations, and real-time streaming — simulating the experience of a legal expert team, but **powered entirely by AI**.
 
@@ -22,8 +22,8 @@ Built for the **Google Cloud Run Hackathon**, Lexi offers clause-by-clause contr
 🧩 Multi-Agent Orchestration  
 Specialized agents for extraction, comparison, and risk analysis, coordinated by a root orchestrator.
 
-📚 Standard Clause Comparison  
-Compares your clauses to reference legal standards using embeddings.
+📚 Embeddings  
+Compares your clauses to reference legal standards using embeddings stored in Firestore.
 
 🧪 Risk Detection & Explanation  
 Highlights potential risks and explains them in plain, human-friendly language.
