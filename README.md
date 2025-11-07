@@ -13,13 +13,14 @@
 - [What we learned](#what-we-learned)
 - [What’s next for Lexi](#whats-next-for-lexi)
 
-Lexi is an intelligent multi-agent platform designed to democratize access to legal document analysis for individuals. 
+Lexi is a multi-agent platform designed to democratize access to legal document analysis for individuals. 
 
-Built for the Google Cloud Run Hackathon, Lexi offers clause-by-clause contract analysis, risk detection, plain-language explanations, and real-time streaming — simulating the experience of a legal expert, but powered entirely by AI.
+Built for the **Google Cloud Run Hackathon**, Lexi offers clause-by-clause contract analysis, risk detection, plain-language explanations, and real-time streaming — simulating the experience of a legal expert team, but **powered entirely by AI**.
 
 ## Features
-✍️ AI-powered Clause Analysis  
-Analyzes each contract clause for meaning, risk, and compliance.
+
+🧩 Multi-Agent Orchestration  
+Specialized agents for extraction, comparison, and risk analysis, coordinated by a root orchestrator.
 
 📚 Standard Clause Comparison  
 Compares your clauses to reference legal standards using embeddings.
@@ -27,11 +28,8 @@ Compares your clauses to reference legal standards using embeddings.
 🧪 Risk Detection & Explanation  
 Highlights potential risks and explains them in plain, human-friendly language.
 
-🧩 Multi-Agent Orchestration  
-Specialized agents for extraction, comparison, and risk analysis, coordinated by a root orchestrator.
-
 🎓 Plain-Language Summaries  
-Translates legalese into clear, actionable insights.
+Translates legal documents into clear, actionable insights.
 
 🎥 Real-Time Streaming UI  
 Frontend streams analysis results as they’re generated for a smooth, interactive experience.
@@ -88,11 +86,7 @@ Clean React UI, deployed on Google Cloud Run.
                                            ▼
                            Streamed JSON → FastAPI → React (UI updates)
 
-**2 services deployed separately to Cloud Run:**
-- --> Frontend: React 
-- --> Backend: FastAPI (this repository)
-
-
+- **2 services deployed separately to Cloud Run: Frontend (built with Google AI studio) & Backend (this repository)
 - Storage: Firestore (for embeddings) 
 - LLMs: gemini-embedding-001, gemini-2.0-flash  
 - OCR: PDF text extraction (in-memory)
@@ -115,7 +109,7 @@ Clean React UI, deployed on Google Cloud Run.
 
 ### How it works 
 
-- **Standard legal clauses** are embedded in Firestore. For now, only employment-related contracts in English under German law are used (see the data folder in the codebase for the JSON data and the embedding script).
+- **Standard legal clauses** are embedded in Firestore. For now, only employment-related contracts in English under German law are used for the scope of this project (see the data folder in this codebase for the JSON data and the embedding script).
 - The user uploads a contract on the frontend service.
 - Before the agents are invoked, a **guardrail** double-checks the input to ensure it’s safe.
 - The **agent team** successively extracts, finds similar standard clauses, compares them and analyzes the clause's risk.
@@ -135,7 +129,7 @@ Then, start the FastAPI server:
 uvicorn api.main:app --reload --port 8080
 ```
 
-For testing, you can send the demo contract:
+For testing, you can send the demo contract included in this codebase:
 
 ```
 curl -X POST "http://localhost:8080/contracts/analyze" \
@@ -148,16 +142,18 @@ curl -X POST "http://localhost:8080/contracts/analyze" \
 
 ## Challenges
 
-* Integrating **ADK**, **FastAPI**, and **embeddings** in a single workflow.
-* Learning how to use **Firestore** effectively for storing and retrieving clause embeddings.
-* Deploying a multi-agent system seamlessly on **Google Cloud Run**.
+
+* Researching and preparing standard legal documents for embedding.
+* Building a modern,**engaging UI** that breaks away from the traditional look of legal apps.
+* Using **Firestore** effectively for storing and retrieving clause embeddings.
+* Coordinating **ADK**, **FastAPI**, and **embeddings** in a single workflow.
+* Integrating **guardrails** to prevent malicious usage and make the app production-ready.
 
 
 ## Accomplishments
 
-* Successfully building a complete pipeline using **ADK**, **FastAPI**, **Firestore**
-* Implementing a multi-agent orchestration system for clause analysis.
-* Learning and applying **Google ADK** — a new and powerful framework for AI agents.
+* Combining Gemini models, Google ADK, Firestore to create an AI app that improves a process and solves a real-world problem.
+* Using Cloud Run to deploy services seamlessly
 
 
 ## What we learned
