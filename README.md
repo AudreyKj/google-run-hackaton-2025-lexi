@@ -13,7 +13,7 @@
 - [What we learned](#what-we-learned)
 - [What’s next for Lexi](#whats-next-for-lexi)
 
-Lexi is a **multi-agent application** designed to democratize access to **legal document analysis for individuals**. 
+Understanding legal contracts is hard. Lexi is a **multi-agent AI app** that helps **individuals** understand legal documents — **offering informative insights without giving legal advice**. It makes legal understanding **empowering** for everyone.
 
 Built for the **Google Cloud Run Hackathon**, Lexi offers clause-by-clause contract analysis, risk detection, plain-language explanations, and real-time streaming — simulating the experience of a legal expert team, but **powered entirely by AI**.
 
@@ -114,6 +114,8 @@ Clean React UI, deployed on Google Cloud Run.
 - Before the agents are invoked, a **guardrail** double-checks the input to ensure it’s safe.
 - The **agent team** successively extracts, finds similar standard clauses, compares them and analyzes the clause's risk.
 - Each agent processes the output of the previous agent and enriches it with its specific task.
+- Lexi’s agents are carefully instructed through their prompts to **minimize hallucinations**.
+- Each agent’s prompt explicitly reminds the model to **stay factual and informative** — **never to provide legal advice**.
 - The API streams the response to the frontend to reduce perceived latency.
 
 ## Installation
@@ -144,10 +146,11 @@ curl -X POST "http://localhost:8080/contracts/analyze" \
 
 
 * Researching and preparing standard legal documents for embedding.
-* Building a modern,**engaging UI** that breaks away from the traditional look of legal apps.
 * Using **Firestore** effectively for storing and retrieving clause embeddings.
 * Coordinating **ADK**, **FastAPI**, and **embeddings** in a single workflow.
 * Integrating **guardrails** to prevent malicious usage and make the app production-ready.
+* Carefully crafting **clear and focused instructions** for each agent to prevent **hallucination** and unintended legal advice.
+* Building a modern,**engaging UI** that breaks away from the traditional look of legal apps. The frontend was built separately with Google AI studio and deployed to Cloud Run.
 
 
 ## Accomplishments
