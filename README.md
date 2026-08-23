@@ -13,9 +13,9 @@
 - [What we learned](#what-we-learned)
 - [What’s next for Lexi](#whats-next-for-lexi)
 
-Understanding legal contracts is hard. Lexi is a **multi-agent AI app** that helps **individuals** understand legal documents — **offering informative insights without giving legal advice**. It makes legal understanding **empowering** for everyone.
+Understanding legal contracts is hard. Lexi is a **multi-agent AI app** that helps **individuals** understand legal documents. It makes legal understanding **empowering** for everyone.
 
-Built for the **Google Cloud Run Hackathon**, Lexi offers clause-by-clause contract analysis, risk detection, plain-language explanations, and real-time streaming — simulating the experience of a legal expert team, but **powered entirely by AI**.
+Built for the **Google Cloud Run Hackathon**, Lexi offers clause-by-clause contract analysis, risk detection, plain-language explanations, and real-time streaming, simulating the experience of a legal expert team, but **powered entirely by AI**.
 
 ## Features
 
